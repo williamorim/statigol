@@ -1,0 +1,31 @@
+:root {
+  --azul: #284a85
+}
+
+
+footer {
+  height: 50px;
+  background-color: var(--azul);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 13px 30px;
+}
+
+footer p {
+  color: white;
+}
+
+footer a {
+  color: white;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #f1b12a;
+  text-decoration: none;
+}
+
+.navbar.navbar-default {
+  background-color: #cadbec !important;
+}

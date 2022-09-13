@@ -8,9 +8,45 @@ app_ui <- function(request) {
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
+    shinyWidgets::useBs4Dash(),
     # Your application UI logic
-    fluidPage(
-      h1("statigol")
+    navbarPage(
+      title = "statigol",
+      theme = bslib::bs_theme(version = 4),
+      tabPanel(
+        title = "Home"
+      ),
+      navbarMenu(
+        title = "Brasileirão",
+        tabPanel(
+          title = "Página inicial"
+        ),
+        tabPanel(
+          title = "Times"
+        ),
+        tabPanel(
+          title = "Estatísticas"
+        ),
+        tabPanel(
+          title = "Recordes"
+        )
+      ),
+      tabPanel(
+        title = "Sobre"
+      ),
+      footer = tags$footer(
+        fluidRow(
+          column(
+            width = 4,
+            p(
+              "Desenvolvido em",
+              a(href = "https://shiny.rstudio.com/", "Shiny"),
+              "por",
+              a(href = "https://twitter.com/home", "William Amorim")
+            )
+          )
+        )
+      )
     )
   )
 }
